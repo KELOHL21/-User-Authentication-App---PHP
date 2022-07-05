@@ -6,14 +6,14 @@
    if (isset($_POST['submit'])) {
 
          // Escape special characters, if any
-         $name = mysqli_real_escape_string($data,$_POST['name']);
+         $name = mysqli_real_escape_string($data, $_POST['name']);
    
          $email = mysqli_real_escape_string($data,$_POST['email']);
    
          // Using md5 to convert password into binary so when compared the password match perfectly
          $password = ($_POST['password']);  
    
-         $confirm_password = ($_POST['confirm_password']);
+         $confirm_password = isset(($_POST['confirm_password']));
    
          $user_type = $_POST['user_type'];
    
@@ -23,7 +23,7 @@
    
          if (mysqli_num_rows($results) > 0) { 
 
-            $row = mysqli_fetch_row($results); //Fetching row matching users email and password
+            $row = mysqli_fetch_array($results); //Fetching row matching users email and password
 
                if ($row['user_type'] == 'librarian'){ 
                   

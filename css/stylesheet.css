@@ -2,6 +2,17 @@
    box-sizing: border-box;
  }
 
+ container .content h1{
+   font-size: 30px;
+   color:#333;
+}
+
+container .content h1 span{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
 
 /* Forms display */
 .form_container{

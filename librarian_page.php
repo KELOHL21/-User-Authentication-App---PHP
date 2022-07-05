@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+include('./includes/mysql_db.inc.php');
+
+if (!isset($_SESSION['librarian_user'])) {
+
+   header('location:login_form.php');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +26,7 @@
    <container>
 
       <div class="content">
-         <h1> Welcome <span>'Librarian'</span></h1>
+         <h1> Welcome Librarian <span><?php echo $_SESSION['librarian_user'] ?></span></h1>
 
          <section>
             <h2>Available Books</h2>
