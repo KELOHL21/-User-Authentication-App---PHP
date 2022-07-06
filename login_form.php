@@ -3,6 +3,8 @@
 
    include('./includes/mysql_db.inc.php');
 
+   error_reporting (E_ALL ^ E_NOTICE);
+
    if (isset($_POST['submit'])) {
 
          // Escape special characters, if any
@@ -54,7 +56,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Labyrinth Library Librarian Login</title>
+   <title>Labyrinth Library Login</title>
    <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 <body>

@@ -9,7 +9,6 @@
 
       $email = mysqli_real_escape_string($data,$_POST['email']);
 
-      // Using md5 to convert password into binary so when compared the password match perfectly
       $password = ($_POST['password']);  
 
       $confirm_password = ($_POST['confirm_password']);
