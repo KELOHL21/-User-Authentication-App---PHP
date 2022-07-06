@@ -62,7 +62,7 @@
 <body>
    <container class="form_container">
 
-      <form class="signup" action="" method="post">
+      <form class="signup" action="" method="post" autocomplete="off">
 
          <h2>Login</h2>
 
@@ -82,6 +82,8 @@
          <input type="password" name="password" required placeholder="enter your password">
 
          <input type="submit" value="Login" name="submit" class="submit_btn">
+
+         <p><a href="./forgot_password.php">Forget your password?</a><p>
 
          <p>don't have an account <a href="./sign_up.php">Sign Up</a></p>
 

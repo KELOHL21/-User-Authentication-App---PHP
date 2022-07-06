@@ -1,4 +1,5 @@
 <?php
+   session_start();
 
    include('./includes/mysql_db.inc.php');
 
@@ -8,6 +9,8 @@
       $name = mysqli_real_escape_string($data,$_POST['name']);
 
       $email = mysqli_real_escape_string($data,$_POST['email']);
+
+      $_SESSION['email'] = $email;
 
       $password = ($_POST['password']);  
 
