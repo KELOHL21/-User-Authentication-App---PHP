@@ -1,28 +1,13 @@
 
-<?php
-session_start();
-?>
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check">  
+<label id="logo">Labyrinth Library</label>
+<ul>
+  <li><a href="./logout.inc.php">Log Out</a></li>
+  <input type="search"  class="search">
+</ul>
 
-<header>
-  <input type="checkbox" id="nav_toggle" class="nav_toggle">
-  <nav>
-    <ul>
-      <li><a href="Homepage.php">Home</a></li> <!---figure out--->
-      <li><a href="#">About</a></li>  <!--Leads no where-->
-      <li><a href="#">Blog</a></li>  <!--Leads no where-->
-      <li><a href="#">Log u</a></li> <!--Leads no where-->
-      <input type="text" id="search_bar" class="search_bar" placeholder="Search"/></input>
-    </ul>
-    
-  </nav>
 
-  <label for="nav_toggle" class="nav_toggle_label">
-    <span><i class="fa-solid fa-bars fa-lg"></i></span>
-  </label>
+</nav>
 
-</header>
-
-<br>
-
-</body>
-</html>

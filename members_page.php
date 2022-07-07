@@ -1,14 +1,5 @@
 <?php
-session_start();
-
-include('./includes/mysql_db.inc.php');
-
-if (!isset( $_SESSION['member_name'])) {
-
-   header('location:login_form.php');
-
-}
-
+include("./includes/joined_tables.inc.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,22 +12,61 @@ if (!isset( $_SESSION['member_name'])) {
    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
+   <!--Navbar -->
+   <?php
+   
+   include("./includes/nav.inc.php");
 
+   ?>
                            <!-- CANNOT SEARCH FOR AUTHORS -->
-
-   <container>
-
+   <container class="form_container">
+   
       <div class="content">
+   
          <h1> Welcome <span><?php echo  $_SESSION['member_name'] ?></span></h1>
+              
+            <table>
+               <tr>
+                  <th class="table_headers">Author</th>
+                  <th class="table_headers">Title</th>
+                  <th class="table_headers">Description</th>
+                  <th class="table_headers">Genre</th>
+                  <th class="table_headers">Age Group</th>
+               </tr>
 
-         <section>
-            <h2>Available Books</h2>
+                  <?php
+                     if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_array($result))
+                        {
+   
+                  ?>
 
-            <!-- Database placed here -->
-            
-         </section>
+               <tr class="table_display">
+                  <td class="details"><?php echo $row['author_name'] ?></td>
+
+                  <td class="details"><?php echo $row['book_name'] ?></td>
+
+                  <td class="details" id="description_detail"><?php echo $row['description'] ?></td>
+
+                  <td class="details" id="genre_details"><?php echo $row['book_genre'] ?></td>
+
+                  <td class="details"><?php echo $row['age_group'] ?></td>
+
+               </tr>
+                  <?php
+
+                        }
+                     } else {
+                        echo "No database connection";
+                     }
+   
+                  ?>
+
+            </table>
+
       </div>
+   
    </container>
-
+  
 </body>
 </html>
