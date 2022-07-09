@@ -1,39 +1,56 @@
 <?php
 include('./includes/mysql_db.inc.php');
 
+
+ $author_name ="";
+ $book_name= "";
+ $description = "";
+ $book_genre="";
+
 if (isset($_POST['save'])) {
 
-    $author = $_POST['author'];
-    $title=$_POST['title'];
-    $description =$_POST['description'];
-    $genre =$_POST['genre'];
+    $author_name = mysqli_real_escape_string($data,$_POST['author_name']);
+   $book_name= mysqli_real_escape_string($data,$_POST['book_name']);
+    $description = mysqli_real_escape_string($data,$_POST['description']);
+   $book_genre = mysqli_real_escape_string($data,$_POST['book_genre']);
 
-   $inserts = "INSERT INTO books ('book_name', 'description','book_genre') VALUES('$title','$description','$genre')";
+    $new_entry = "INSERT INTO books(book_name,description,book_genre)"." VALUES ('$book_name','$description','$book_genre')" ;
 
-   mysqli_query($data, $inserts);
+   $result=$data->query($new_entry);
 
-}else {
-    echo "no connection";
 }
-
 ?>
 
-<container class="form_container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Labyrinth Library Home</title>
+   <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
 
-<form class="new_book" action="" method="POST">
+  <container class="form_container">
 
-   <h2>Add New Book</h2>
-
-   <input type="text" name="author" required placeholder="Author"> 
-
-   <input type="text" name="title" required placeholder="Title"> 
-
-   <input type="pararaph" name="description" required placeholder="Description"> 
-
-   <input type="text" name="genre" required placeholder="Genre"> 
-
-   <input type="submit" value="Save" name="save" class="submit_btn">
-
-</form>
+    <form class="new_book" action="" method="POST">
+    
+    <h2>Add New Book</h2>
+    
+    <input type="text" name="author_name" required placeholder="Author"> 
+    
+    <input type="text" name="book_name" required placeholder="Title"> 
+    
+    <input type="text" name="description" required placeholder="Description"> 
+    
+    <input type="text" name="book_genre" required placeholder="Genre"> 
+    
+    <input type="submit" value="Save" name="save" class="submit_btn">
+    
+    </form>
 
 </container>
+  
+</body>
+</html>

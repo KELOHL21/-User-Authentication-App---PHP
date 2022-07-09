@@ -104,6 +104,7 @@ container .content h1 span{
    text-align: center;
    border: 0.5px solid black;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   padding: 6.5px;
 }
 
 #description_detail{
@@ -113,7 +114,7 @@ container .content h1 span{
 }
 
 #genre_details{
-   width: 20%;
+   width: 30%;
 }
 
 
@@ -159,4 +160,27 @@ label{
 
 .new_book{
    width: 20%;
+}
+
+.buttons{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:5px;
+   text-decoration: none;
+}
+
+.buttons:hover{
+   background: rgb(225, 104, 128);
+}
+
+.new_book{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 25px;
+   padding:5px;
+   text-decoration: none;
+   align-self: center;
 }

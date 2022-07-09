@@ -1,10 +1,8 @@
 <?php
-include("./book.php");
 
 include("./includes/joined_tables.inc.php");
 
-//  $insert = "INSERT INTO users(name, email, password, user_type) VALUES('$name','$email','$password','$user_type')";
-// mysqli_query($data, $insert);
+
 
 ?>
 
@@ -32,16 +30,15 @@ include("./includes/joined_tables.inc.php");
       <div class="content">
          <h1> Welcome Librarian <span><?php echo $_SESSION['librarian_user'] ?></span></h1>
 
-         <!-- <!-- Insert into database -->
-         <form class="new_book" action="./book.php" method="GET">
-            <input type="submit" name="new_book" value="Add New Book">
-         </form>
-
+            <!-- Insert into database -->
+            <div>
+            <a href="./book.php" class="new_book" >New book</a>
+            </div>
+            
             <table>
                <tr>
                   <th class="table_headers">Author</th>
                   <th class="table_headers">Title</th>
-                  <th class="table_headers">Description</th>
                   <th class="table_headers">Genre</th>
                   <th class="table_headers">Age Group</th>
                </tr>
@@ -57,11 +54,14 @@ include("./includes/joined_tables.inc.php");
 
                   <td class="details"><?php echo $row['book_name'] ?></td>
 
-                  <td class="details" id="description_detail"><?php echo $row['description'] ?></td>
-
                   <td class="details" id="genre_details"><?php echo $row['book_genre'] ?></td>
 
                   <td class="details"><?php echo $row['age_group'] ?></td>
+
+                  <td>
+                    <!--Creat edit page--> <a href="" class="buttons" id= "<?php $row['book_id'] ?>">Edit</a>
+                    <!--Creat delete page--> <a href="" class="buttons" id= "<?php $row['book_id'] ?>">Delete</a>
+                  </td>
 
                </tr>
                <?php
