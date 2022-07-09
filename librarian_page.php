@@ -1,5 +1,11 @@
 <?php
+include("./book.php");
+
 include("./includes/joined_tables.inc.php");
+
+//  $insert = "INSERT INTO users(name, email, password, user_type) VALUES('$name','$email','$password','$user_type')";
+// mysqli_query($data, $insert);
+
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +25,17 @@ include("./includes/joined_tables.inc.php");
          include("./includes/nav.inc.php");
 
        ?>
-           
+          
 
    <container class="form_container">
 
       <div class="content">
          <h1> Welcome Librarian <span><?php echo $_SESSION['librarian_user'] ?></span></h1>
+
+         <!-- <!-- Insert into database -->
+         <form class="new_book" action="./book.php" method="GET">
+            <input type="submit" name="new_book" value="Add New Book">
+         </form>
 
             <table>
                <tr>

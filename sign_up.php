@@ -35,7 +35,7 @@
 
             $insert = "INSERT INTO users(name, email, password, user_type) VALUES('$name','$email','$password','$user_type')";
             mysqli_query($data, $insert);
-            header('location:login_form.php');
+            header('location:index.php');
          }
       }
    }
@@ -87,7 +87,7 @@
 
          <input type="submit" value="Sign Up now" name="submit" class="submit_btn">
 
-         <p>already have an account <a href="./login_form.php">Login in</a></p>
+         <p>already have an account <a href="./index.php">Login in</a></p>
 
       </form>
 

@@ -22,9 +22,8 @@ include("./includes/joined_tables.inc.php");
    <container class="form_container">
    
       <div class="content">
-   
          <h1> Welcome <span><?php echo  $_SESSION['member_name'] ?></span></h1>
-              
+         
             <table>
                <tr>
                   <th class="table_headers">Author</th>
