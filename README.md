@@ -10,3 +10,4 @@ User Authentication App for the local library, which helps librarians and member
 #BackLog
 -Functional Search engine
 -Add,Update and Delete needds to be added in Librarian Home Page
+-Retrieve Password
