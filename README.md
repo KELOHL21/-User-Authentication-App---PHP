@@ -5,7 +5,7 @@ User Authentication App for the local library, which helps librarians and member
 #Feature
 -User sign in
 -Librarian sign in
--Different homepaes depending on the role of person
+-Different homepages depending on the role of person
 
 #BackLog
 -Functional Search engine
