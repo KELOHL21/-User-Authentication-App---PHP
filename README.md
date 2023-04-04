@@ -1,6 +1,10 @@
 # User Authentication App - PHP
 
-User Authentication App for the local library, which helps librarians and members of the library, find books online without having to physically be at the library. Using MySQL databases and PHP
+<p>
+User Authentication App for the a local library, which helps librarians and members of the library, find books online without having to physically be at the library.
+</p>
+<b>Using MySQL databases and PHP</b>
+
 
 #Feature
 -User sign in
