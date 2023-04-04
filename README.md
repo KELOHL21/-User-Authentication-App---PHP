@@ -1,4 +1,4 @@
-# USERAUTHENTICATIONAPP
+# User Authentication App - PHP
 
 User Authentication App for the local library, which helps librarians and members of the library, find books online without having to physically be at the library. Using MySQL databases and PHP
 
@@ -9,5 +9,5 @@ User Authentication App for the local library, which helps librarians and member
 
 #BackLog
 -Functional Search engine
--Add,Update and Delete needds to be added in Librarian Home Page
+-Add,Update and Delete needs to be added in Librarian Home Page
 -Retrieve Password
