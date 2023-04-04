@@ -7,7 +7,7 @@ User Authentication App for the a local library, which helps librarians and memb
 <b>Using MySQL databases and PHP</b>
 
 
-#Feature
+#Features
 <ul>
   <li>User sign in</li>
   <li>Librarian sign in</li>
